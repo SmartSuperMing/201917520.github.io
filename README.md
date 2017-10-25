@@ -1,4 +1,5 @@
 # demos
-这是关于bash脚本的练习
+这是关于作业练习
 demo.sh
 demo.js
+简历初期
