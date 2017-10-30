@@ -1,0 +1,220 @@
+.clearfix::after{
+    content: '';
+    display: block;
+    clear: both;
+}
+
+body{
+    background: #efefef;
+    margin: 0px;
+    /*color: white;*/
+}
+
+a{
+    text-decoration: none;
+    color: inherit;
+}
+*{
+    margin:0px;
+    padding:0px; 
+}
+
+.topNavBar .logo{
+    float:left;
+    font-family: "Arial Black";
+    font-size: 22px;
+    padding-top:5px;
+    padding-bottom:4px;
+}
+
+.topNavBar .logo .rs{
+    color: #e6686a;
+    margin-right: 4px;
+}
+
+.topNavBar .logo .card{
+    color: #9A9DA2;
+}
+    
+.topNavBar nav{
+    float:right;
+    padding-top:7px;
+    padding-bottom:0px;
+}
+
+.topNavBar nav>ul{
+    margin:0px;
+    padding:0px;
+}
+    
+.topNavBar nav>ul>li{
+    float: left;
+    list-style: none;
+    margin-left: 15px;
+    margin-right: 15px;
+}
+
+.topNavBar nav>ul>li>a{
+    color: rgba(255, 255, 255, 0.701961);
+    font-size: 13px;
+    font-weight: bold;
+    border-bottom: 3px solid transparent;
+    border-top: 3px solid transparent;
+    padding-top:5px;
+    padding-bottom:5px;
+    display: block;
+}
+
+.topNavBar nav>ul>li>a:hover{
+    border-bottom: 3px solid #E86767;
+}
+
+.topNavBar{
+    padding-top: 17px;
+    padding-bottom: 17px;  /*9 */
+    position: fixed; /*（！） */
+    top:0; /*（！） */
+    left:0; /*（！） */
+    width:100%;
+
+}
+
+/* 第二次 （！） */
+.topNavBar-inner{
+    padding-left: 16px;
+    padding-right:16px;
+}
+
+.banner{
+    height:515px;
+    background-image:url(./img/1.jpg);
+    background-position: center center;
+    background-size: cover;
+}
+
+.banner .mask{
+    height:515px;
+    background: rgba(0, 0, 0, 0.8);
+}
+
+main .card{
+    border: 1px solid red;
+    max-width: 940px;
+    margin-left: auto;
+    margin-right:auto;
+    background: #ffffff;
+}
+
+.card .welcome{
+    color: #FDEFEF;
+    background: #E86767;
+    font-family:'Open Sans';
+    font-size:14px;
+    padding-left:13px;
+    padding-right:13px;
+    padding-top:6px;
+    padding-bottom:6px;
+    /*padding:6px,13px,6px,13px;*/
+    line-height:18px;
+    display:inline-block;
+    position:relative;
+    
+}
+
+.card .welcome .Triangle{
+    /*三角形*/
+    border: 10px solid transparent;
+    border-top: 0px solid transparent;
+    border-left:10px solid #E86767;
+    border-right:10px solid transparent;
+    width:0px;
+    height:0px;
+    display:block;
+    position:absolute;
+    top:100%;
+    left:6px;
+}
+
+.card .summary .picter{
+    float:left;
+}
+
+.card .summary .text{
+    float:left;
+    margin-left:65px;
+    width:470px;
+}
+
+.card .summary{
+    padding:50px;
+}
+
+.text h1{
+    padding-top:26px;
+    padding-bottom:8px;
+    color:#3D4451;
+}
+
+.text p{
+    padding-bottom:24px;
+    color:#43495B;
+}
+
+.text hr{
+    height:0px;
+    border:none;
+    border-top:1px solid #DEDEDE;
+    margin-bottom:11px;
+}
+
+.text dl dt{
+    float:left;
+    width:28%;
+    color:#333333;
+    font-family:'Open Sans';
+    font-size: 12px;
+    font-weight: bold;
+    padding-top:14px;
+}
+
+.text dl dd{
+    float:left;
+    width:72%;
+    color:#9da0a7;
+    font-family:'Open Sans';
+    font-size: 15px;
+    padding-top:14px;
+}
+
+
+.card footer{
+    background-color:#E86767; 
+}
+
+.media .icon{
+    width:30px;
+    fill: white;
+    height:30px;
+    vertical-align:top;
+    
+}
+
+.media a{
+    display:inline-block;
+    border-radius:50%;
+   /*  height:40px;*/
+    width:40px;
+    line-height:30px;
+    padding-top:5px;
+    padding-bottom:5px; 
+    margin: 19px 24px 19px 24px;
+}
+
+.media a:hover{
+    background-color: #D05D5D;
+}
+
+.media{
+    text-align: center;
+    margin-top:-15px;
+}
