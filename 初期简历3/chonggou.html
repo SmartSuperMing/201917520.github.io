@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="./2.css">
+    <style type="text/css">
+        .icon {
+            width: 1em;
+            height: 1em;
+            vertical-align: -0.15em;
+            fill: currentColor;
+            overflow: hidden;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="topNavBar">
+        <div class="topNavBar-inner clearfix">
+            <a href="#" class="logo" alt="logo">
+                    <span class="rs">RS</span><span class="card">card</span>
+                </a>
+            <nav>
+                <ul class="clearfix">
+                    <li><a href="#">关于</a></li>
+                    <li><a href="#">技能</a></li>
+                    <li><a href="#">作品</a></li>
+                    <li><a href="#">博客</a></li>
+                    <li><a href="#">日历</a></li>
+                    <li><a href="#">联系方式</a></li>
+                    <li><a href="#">其他</a></li>
+                </ul>
+            </nav>
+        </div>
+    </div>
+    <div class="banner">
+        <div class="mask"></div>
+    </div>
+    <main>
+        <div class="card">
+            <div class="summary clearfix">
+                <div class="picter">
+                    <img src="./img/avatar.jpg" alt="头像">
+                </div>
+                <div class="text">
+                    <span class="welcome">HELLO
+                            <span class="Triangle"></span>
+                    </span>
+                    <h1>刘岳</h1>
+                    <p>初级前端开发</p>
+                    <hr>
+                    <dl class="clearfix">
+                        <dt>年龄</dt>
+                        <dd>24</dd>
+                        <dt>所在城市</dt>
+                        <dd>北京</dd>
+                        <dt>邮箱</dt>
+                        <dd>843120598@qq.com</dd>
+                        <dt>手机</dt>
+                        <dd>13718222074</dd>
+                        <dt>民族</dt>
+                        <dd>汉族</dd>
+                    </dl>
+                </div>
+            </div>
+            <footer class="media">
+                <a href="#">
+                    <svg class="icon" aria-hidden="true">
+                        <use xlink:href="#icon-github"></use>
+                    </svg>
+                </a>
+                <a href="#">
+                    <svg class="icon" aria-hidden="true">
+                        <use xlink:href="#icon-blog"></use>
+                    </svg>
+                </a>
+                <a href="#">
+                    <svg class="icon" aria-hidden="true">
+                        <use xlink:href="#icon-tian7_facebook"></use>
+                    </svg>
+                </a>
+                <a href="#">
+                    <svg class="icon" aria-hidden="true">
+                        <use xlink:href="#icon-zhihufangxingdianji"></use>
+                    </svg>
+                </a>
+                <a href="#">
+                    <svg class="icon" aria-hidden="true">
+                        <use xlink:href="#icon-ssss"></use>
+                    </svg>
+                </a>
+                <a href="#">
+                    <svg class="icon" aria-hidden="true">
+                        <use xlink:href="#icon-qq"></use>
+                    </svg>
+                </a>
+                <a href="#">
+                    <svg class="icon" aria-hidden="true">
+                        <use xlink:href="#icon-weixin"></use>
+                    </svg>
+                </a>
+            </footer>
+        </div>
+        <p class="download-wrapper">
+            <a href="javascript:;" download class="download">DOWNLOAD RESUME</a>
+        </p>
+        <p class="introduce">
+            刘岳， 初级前端工程师。<br> 技能：html，css，js，HTTP，Node.js
+        </p>
+    </main>
+    <section class="skill-List">
+        <h2>Professional Skills</h2>
+        <ol class="clearfix">
+            <li>
+                <h3>HTML 5 &amp; CSS 3</h3>
+                <div class="ProgressBar">
+                    <div class="Progress" style="width:90%;"></div>
+                </div>
+            </li>
+            <li>
+                <h3>JavaScript</h3>
+                <div class="ProgressBar">
+                    <div class="Progress" style="width:80%;"></div>
+                </div>
+            </li>
+            <li>
+                <h3>jQuery</h3>
+                <div class="ProgressBar">
+                    <div class="Progress" style="width:70%;"></div>
+                </div>
+            </li>
+            <li>
+                <h3>Vue</h3>
+                <div class="ProgressBar">
+                    <div class="Progress" style="width:85%;"></div>
+                </div>
+            </li>
+            <li>
+                <h3>React</h3>
+                <div class="ProgressBar">
+                    <div class="Progress" style="width:80%;"></div>
+                </div>
+            </li>
+            <li>
+                <h3>HTTP</h3>
+                <div class="ProgressBar">
+                    <div class="Progress" style="width:75%;"></div>
+                </div>
+            </li>
+        </ol>
+    </section>
+    <section class="Sample">
+        <h2>Portfolio</h2>
+        <nav>
+            <ol class="clearfix">
+                <li id="WorksLibrary">作品库</li>
+                <li id="frame">框架</li>
+                <li id="Native">原生js</li>
+            </ol>
+            <div id="SampleBarAll" class="SampleBar state-1">
+                <div class="SampleBar-inner"></div>
+            </div>
+        </nav>
+        <script>
+            WorksLibrary.onclick = function(){
+                SampleBarAll.className = "SampleBar state-1"
+            }
+            frame.onclick = function(){
+                SampleBarAll.className = "SampleBar state-2"
+            }
+            Native.onclick = function(){
+                SampleBarAll.className = "SampleBar state-3"
+            }
+        </script>
+
+        <div class="works"style="height: 600px;">
+            <div class="big"style="top: 0; left: 0;">
+                <img src="./img/job1.jpg" alt="作品1">
+            </div>
+            <div class="small1" style="top: 0px; left: 645px;">
+                <img src="./img/job2.jpg" alt="作品2">
+            </div>
+            <div class="small2"style="top: 312px; left: 645px;"> 
+                <img src="./img/job3.jpg" alt="作品3">
+            </div>
+        </div>
+    </section>
+    <script src="//at.alicdn.com/t/font_458771_2apkist5etye3ik9.js"></script>
+</body>
+
+</html>
