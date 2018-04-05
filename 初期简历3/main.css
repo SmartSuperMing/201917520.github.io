@@ -1,110 +1,39 @@
-.clearfix::after{
-    content: '';
-    display: block;
-    clear: both;
-}
+.clearfix::after { content: ''; display: block; clear: both;}
+body { background: #efefef; margin: 0px; /*color: white;*/}
+a { text-decoration: none; color: inherit;}
+* { margin:0px; padding:0px; }
+ul,ol,li { list-style: none;}
+h1,h2,h3,h4,h5,h6 { font-weight: normal;}
 
-body{
-    background: #efefef;
-    margin: 0px;
-    /*color: white;*/
-}
 
-a{
-    text-decoration: none;
-    color: inherit;
-}
-*{
-    margin:0px;
-    padding:0px; 
-}
+.topNavBar { padding: 17px 0 17px 0; position: fixed;  top: 0;  left: 0;  width:100%;}
+.topNavBar-inner { padding: 0 16px;}
+.topNavBar .logo { float:left; font-family: "Arial Black"; font-size: 22px; padding:5px 0 4px 0;}
+.topNavBar .logo .rs { color: #e6686a; margin-right: 4px;}
+.topNavBar .logo .card { color: #9A9DA2;}
+.topNavBar nav { float:right; padding-top:7px;}
+.topNavBar nav>ul { margin:0px; padding:0px;}
+.topNavBar nav>ul>li { float: left; margin-left: 15px; margin-right: 15px;}
+.topNavBar nav>ul>li>a { color: rgba(255, 255, 255, 0.701961); font-size: 13px; font-weight: bold; 
+   border-bottom: 3px solid transparent; border-top: 3px solid transparent; padding-top:5px 0 5px 0; display: block;}
+.topNavBar nav>ul>li>a:hover { border-bottom: 3px solid #E86767;}
 
-ul,ol{
-    list-style: none;
-}
-h1,h2,h3,h4,h5,h6{
-    font-weight: normal;
-}
 
-.topNavBar .logo{
-    float:left;
-    font-family: "Arial Black";
-    font-size: 22px;
-    padding-top:5px;
-    padding-bottom:4px;
-}
 
-.topNavBar .logo .rs{
-    color: #e6686a;
-    margin-right: 4px;
-}
 
-.topNavBar .logo .card{
-    color: #9A9DA2;
-}
-    
-.topNavBar nav{
-    float:right;
-    padding-top:7px;
-    padding-bottom:0px;
-}
-
-.topNavBar nav>ul{
-    margin:0px;
-    padding:0px;
-}
-    
-.topNavBar nav>ul>li{
-    float: left;
-    list-style: none;
-    margin-left: 15px;
-    margin-right: 15px;
-}
-
-.topNavBar nav>ul>li>a{
-    color: rgba(255, 255, 255, 0.701961);
-    font-size: 13px;
-    font-weight: bold;
-    border-bottom: 3px solid transparent;
-    border-top: 3px solid transparent;
-    padding-top:5px;
-    padding-bottom:5px;
-    display: block;
-}
-
-.topNavBar nav>ul>li>a:hover{
-    border-bottom: 3px solid #E86767;
-}
-
-.topNavBar{
-    padding-top: 17px;
-    padding-bottom: 17px;  /*9 */
-    position: fixed; /*（！） */
-    top:0; /*（！） */
-    left:0; /*（！） */
-    width:100%;
-
-}
-
-/* 第二次 （！） */
-.topNavBar-inner{
-    padding-left: 16px;
-    padding-right:16px;
-}
-
-.banner{
+.banner {
     height:515px;
     background-image:url(./img/1.jpg);
     background-position: center center;
     background-size: cover;
 }
 
-.banner .mask{
+.banner .mask {
     height:515px;
     background: rgba(0, 0, 0, 0.8);
 }
 
-main .card{
+main .card {
     border:1px solid #CDCDCD;
     max-width: 940px;
     margin-left: auto;
@@ -113,7 +42,7 @@ main .card{
     box-shadow: 0px 1px 5px 0px rgba(0, 0, 0, 0.5);
 }
 
-.card .welcome{
+.card .welcome {
     color: #FDEFEF;
     background: #E86767;
     font-family:'Open Sans';
@@ -129,7 +58,7 @@ main .card{
     
 }
 
-.card .welcome .Triangle{
+.card .welcome .Triangle {
     /*三角形*/
     border: 10px solid transparent;
     border-top: 0px solid transparent;
@@ -143,40 +72,40 @@ main .card{
     left:6px;
 }
 
-.card .summary .picter{
+.card .summary .picter {
     float:left;
 }
 
-.card .summary .text{
+.card .summary .text {
     float:left;
     margin-left:65px;
     width:470px;
 }
 
-.card .summary{
+.card .summary {
     padding:50px;
     background: linear-gradient(to bottom, #ffffff 0%,#f3f3f3 6%,#ededed 66%,#ededed 87%,#ffffff 100%);
 }
 
-.text h1{
+.text h1 {
     padding-top:26px;
     padding-bottom:8px;
     color:#3D4451;
 }
 
-.text p{
+.text p {
     padding-bottom:24px;
     color:#43495B;
 }
 
-.text hr{
+.text hr {
     height:0px;
     border:none;
     border-top:1px solid #DEDEDE;
     margin-bottom:11px;
 }
 
-.text dl dt{
+.text dl dt {
     float:left;
     width:28%;
     color:#333333;
@@ -186,7 +115,7 @@ main .card{
     padding-top:14px;
 }
 
-.text dl dd{
+.text dl dd {
     float:left;
     width:72%;
     color:#9da0a7;
@@ -196,12 +125,12 @@ main .card{
 }
 
 
-.card footer{
+.card footer {
     background-color:#E86767; 
     
 }
 
-.media .icon{
+.media .icon {
     width:30px;
     fill: white;
     height:30px;
@@ -209,7 +138,7 @@ main .card{
     
 }
 
-.media a{
+.media a {
     display:inline-block;
     border-radius:50%;
    /*  height:40px;*/
@@ -220,21 +149,21 @@ main .card{
     margin: 19px 24px 19px 24px;
 }
 
-.media a:hover{
+.media a:hover {
     background-color: #D05D5D;
 }
 
-.media{
+.media {
     text-align: center;
     margin-top:-15px;
 }
 
 /*第三次*/
-main{
+main {
     margin-top:-348px;
 }
 
-p .download{
+p .download {
     display: inline-block;
     font-size: 15px;
     color:rgb(61, 68, 81);
@@ -249,16 +178,16 @@ p .download{
 
 }
 
-p .download:hover{
+p .download:hover {
     font-weight:bold;
     box-shadow: 0px 2px 2px 2px rgba(0, 0, 0, 0.1);
     transition:box-shadow 0.35s;
 }
-.download-wrapper{
+.download-wrapper {
     text-align: center;
 }
 
-.introduce{
+.introduce {
     background: linear-gradient(to right, #f4f4f4 0%,#e2e2e2 28%,#e8e8e8 72%,#f7f7f7 100%);
     font-size:18px;
     font-family: "楷体";
@@ -271,7 +200,7 @@ p .download:hover{
 
 
 .skill-List,
-.Sample{
+.Sample {
     max-width: 940px;
     margin-left: auto;
     margin-right:auto;
@@ -279,7 +208,7 @@ p .download:hover{
 }
 
 .skill-List h2,
-.Sample h2{
+.Sample h2 {
     text-align: center;
     font-family: "Open Sans";
     color: rgb(61, 68, 81);
@@ -288,14 +217,14 @@ p .download:hover{
     line-height: 1.2;
     margin-bottom:26px;
 }
-.skill-List ol{
+.skill-List ol {
     box-shadow: 0px 2px 2px 2px rgba(0, 0, 0, 0.4);
     background-color:#ffffff;
     padding: 43px 21px 13px 51px;
 }
 /*不使用伪类又想左右对称可以加border后量距离减少一定ol右margin即可（原51）。另一种方法是加伪类，306条*/
 
-.skill-List ol li{
+.skill-List ol li {
     float:left;
     width:50%;
     box-sizing: border-box;
@@ -311,44 +240,44 @@ p .download:hover{
     }li里要修改width，padding就不需要了。单数修改是odd。
    */
 
-    .skill-List ol li .ProgressBar{
+    .skill-List ol li .ProgressBar {
     background-color: #FBE0E0;
     height:5px;
     margin-bottom:37px;
     border-radius:2px;
 }
 
-.skill-List ol li .ProgressBar .Progress{
+.skill-List ol li .ProgressBar .Progress {
     height:100%;
     background-color:#E86767;
     width:70%;
     border-radius:2px;
 }
 
-.skill-List li H3{
+.skill-List li H3 {
     line-height: 1.1;
     padding-right:40px;
     font-size: 14px;
     margin-bottom:5px;
     color: #3F3F3F}
 
-.Sample{
+.Sample {
     text-align: center;
 }
 
-.Sample nav{
+.Sample nav {
     display: inline-block;
     vertical-align: top;
 }
 
 
-.Sample nav ol{
+.Sample nav ol {
     display: inline-block;
     vertical-align: top;
 }
 
 
-.Sample nav ol li{
+.Sample nav ol li {
     float:left;
     margin-left:48px;
     font-size: 13px;
@@ -359,11 +288,11 @@ p .download:hover{
 
 }
 
-.Sample nav ol li:nth-child(1){
+.Sample nav ol li:nth-child(1) {
     margin-left:0px
 }
 
-.SampleBar{
+.SampleBar {
     background-color:  #FFFFFF;
     height: 7px;
     width:100%;
@@ -372,7 +301,7 @@ p .download:hover{
     margin-bottom: 38px;
 }
 
-.SampleBar .SampleBar-inner{
+.SampleBar .SampleBar-inner {
     background-color: #E86767;
     height: 7px;
     width:38px;
@@ -380,42 +309,42 @@ p .download:hover{
     transition: all 0.3s;
 }
 
-.SampleBar.state-1 .SampleBar-inner{
+.SampleBar.state-1 .SampleBar-inner {
     margin-left:0px;
 }
 
-.SampleBar.state-2 .SampleBar-inner{
+.SampleBar.state-2 .SampleBar-inner {
     margin-left:83px;
     width:30px;
 }
 
-.SampleBar.state-3 .SampleBar-inner{
+.SampleBar.state-3 .SampleBar-inner {
     margin-left:160px;
     width:40px;
 }
 
-section.Sample .works{
+section.Sample .works {
     position: relative;
     box-shadow: 0 1px 6px rgba(0, 0, 0, 0.12), 0 1px 4px rgba(0, 0, 0, 0.24);
     margin-bottom: 38px;
 }
 
 
-section.Sample .works > .big{
+section.Sample .works > .big {
     position: absolute;
     box-shadow: 0 1px 6px rgba(0, 0, 0, 0.12), 0 1px 4px rgba(0, 0, 0, 0.24);
 
 
 }
 
-section.Sample .works > .small1{
+section.Sample .works > .small1 {
     position: absolute;
     box-shadow: 0 1px 6px rgba(0, 0, 0, 0.12), 0 1px 4px rgba(0, 0, 0, 0.24);
 }
 
 
 
-section.Sample .works > .small2{
+section.Sample .works > .small2 {
     position: absolute;
     box-shadow: 0 1px 6px rgba(0, 0, 0, 0.12), 0 1px 4px rgba(0, 0, 0, 0.24);
 }
