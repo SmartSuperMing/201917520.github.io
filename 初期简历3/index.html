@@ -37,17 +37,36 @@
     <div id="siteWelcome" class="site-welcome active">
         <div class="loading"></div>
     </div>
-    <div class="topNavBar">
+    <div id="topNavBar" class="topNavBar">
         <div class="topNavBar-inner clearfix">
             <a href="#" class="logo" alt="logo">
                 <span class="rs">RS</span><span class="card">card</span>
             </a>
-            <nav>
+            <nav class="menu">
                 <ul class="clearfix">
-                    <li><a href="#">关于</a></li>
-                    <li><a href="#">技能</a></li>
-                    <li><a href="#">作品</a></li>
-                    <li><a href="#">博客</a></li>
+                    <li><a href="#siteAbout">关于</a></li>
+                    <li><a href="#siteSkills">技能</a></li>
+                    <li>
+                        <a href="#siteWorks">作品</a>
+                        <ul class="submenu">
+                            <li><a href="#">键盘导航</a></li>
+                            <li><a href="#">canvas在线画板</a></li>
+                            <li><a href="#">会动的XXX</a></li>
+                            <li><a href="#">网易云音乐</a></li>
+                            <li><a href="#">vue简历生成器</a></li>
+                            <li><a href="#">移动端春节贺卡</a></li>
+                            <li><a href="#">苹果风格轮播</a></li>
+                            <li><a href="#">移动端豆瓣电影</a></li>
+                            <li><a href="#">2种风格在线简历</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#">博客</a>
+                        <ul class="submenu">
+                            <li><a href="#">简书</a></li>
+                            <li><a href="#">github</a></li>
+                        </ul>
+                    </li>
                     <li><a href="#">日历</a></li>
                     <li><a href="#">联系方式</a></li>
                     <li><a href="#">其他</a></li>
@@ -59,7 +78,7 @@
         <div class="mask"></div>
     </div>
     <main>
-        <div class="card">
+        <div id="siteAbout" class="card">
             <div class="summary clearfix">
                 <div class="picter">
                     <img src="./img/avatar.jpg" alt="头像">
@@ -130,7 +149,7 @@
             刘岳， 初级前端工程师。<br> 技能：html，css，js，HTTP，Node.js
         </p>
     </main>
-    <section class="skill-List">
+    <section id="siteSkills" class="skill-List">
         <h2>Professional Skills</h2>
         <ol class="clearfix">
             <li>
@@ -171,7 +190,7 @@
             </li>
         </ol>
     </section>
-    <section class="Sample">
+    <section id="siteWorks" class="Sample">
         <h2>Portfolio</h2>
         <nav>
             <ol class="clearfix">
@@ -209,6 +228,40 @@
     </section>
     <script>
         setTimeout(function(){siteWelcome.classList.remove('active')},2000)
+
+        window.onscroll = function(e){
+            if(scrollY>0){
+                topNavBar.classList.add('stick')
+            }else{
+                topNavBar.classList.remove('stick')
+            }
+        }
+
+
+        let liTags = document.querySelectorAll('nav.menu > ul > li')
+        for(let i = 0;i<liTags.length;i++){
+           liTags[i].onmouseenter = function(e){
+             e.currentTarget.classList.add('active')
+           }
+
+           liTags[i].onmouseleave = function(e){
+             e.currentTarget.classList.remove('active')      
+            }
+        }
+
+
+        let aTags = document.querySelectorAll('nav.menu > ul > li > a')
+        for(let i =0;i<aTags.length;i++){
+            aTags[i].onclick = function(e){
+                e.preventDefault()
+                let a = e.currentTarget
+                let href = a.getAttribute('href')
+                let element = document.querySelector(href)
+              //let rect = element.getBoundingClientRect() 如果使用该API想获得下面的值，可以用rect.top+scrollY得到，scrollY===鼠标滚动的距离，rect.top===页面窗口顶端与element元素的距离。两者合为页面顶端距离当前元素的距离。
+                let top = element.offsetTop  //元素距离页面顶端的距离
+                window.scrollTo(0,top-80)
+            }
+        }
     </script>
     <script src="//at.alicdn.com/t/font_458771_2apkist5etye3ik9.js"></script>
 </body>

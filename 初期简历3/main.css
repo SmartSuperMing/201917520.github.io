@@ -6,17 +6,52 @@ ul,ol,li { list-style: none;}
 h1,h2,h3,h4,h5,h6 { font-weight: normal;}
 
 
-.topNavBar { padding: 17px 0 17px 0; position: fixed;  top: 0;  left: 0;  width:100%;}
+.topNavBar { padding: 17px 0 17px 0; position: fixed;  top: 0;  left: 0;  width:100%; 
+   color: rgba(255, 255, 255, 0.701961); transition: all 0.5s;}
+.topNavBar.stick {
+    background: white;
+    box-shadow: 0 0 10px rgba(0,0,0,0.55);
+    color: #3D4451;
+    z-index: 1;
+    padding: 12px 0;
+}
 .topNavBar-inner { padding: 0 16px;}
 .topNavBar .logo { float:left; font-family: "Arial Black"; font-size: 22px; padding:5px 0 4px 0;}
 .topNavBar .logo .rs { color: #e6686a; margin-right: 4px;}
 .topNavBar .logo .card { color: #9A9DA2;}
-.topNavBar nav { float:right; padding-top:7px;}
+.topNavBar nav { float:right; padding-top: 8px;}
 .topNavBar nav>ul { margin:0px; padding:0px;}
-.topNavBar nav>ul>li { float: left; margin-left: 15px; margin-right: 15px;}
-.topNavBar nav>ul>li>a { color: rgba(255, 255, 255, 0.701961); font-size: 13px; font-weight: bold; 
-   border-bottom: 3px solid transparent; border-top: 3px solid transparent; padding-top:5px 0 5px 0; display: block;}
-.topNavBar nav>ul>li>a:hover { border-bottom: 3px solid #E86767;}
+.topNavBar nav>ul>li { float: left; margin-left: 15px; margin-right: 15px; position: relative;}
+.topNavBar nav>ul>li>a { color: inherit; font-size: 13px; font-weight: bold; position: relative;
+   border-bottom: 3px solid transparent; border-top: 3px solid transparent; display: block;}
+.topNavBar nav>ul>li.active>a::after { content: ''; display:block; background: #E86767; width: 100%; height: 3px;
+   position: absolute; top: 100%; left: 0; animation: menuSlide .3s }
+@keyframes menuSlide{ 0% {width: 0;} 100%{width: 100%;} }
+
+.topNavBar .submenu {
+    display: none;
+    position: absolute;
+    top: 100%; 
+    right: 0;
+    background: white;
+    color: #3d4451;
+    box-shadow: 0 0 10px rgba(0,0,0,0.5);
+}
+
+.topNavBar .submenu>li{
+    white-space: nowrap;
+    padding: 5px 10px;
+}
+
+.topNavBar li.active> .submenu {
+    display: block;
+    animation: submenuSlide .3S;
+}
+
+@keyframes submenuSlide{
+    0%{ margin-right: 100%;}
+    100%{ margin-right: 0%;}
+}
 
 
 
