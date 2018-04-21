@@ -87,7 +87,7 @@
                     <span class="welcome">HELLO
                             <span class="Triangle"></span>
                     </span>
-                    <h1>刘岳</h1>
+                    <h1>...</h1>
                     <p>初级前端开发</p>
                     <hr>
                     <dl class="clearfix">
@@ -250,7 +250,15 @@
         }
 
 
+
+
+
         let aTags = document.querySelectorAll('nav.menu > ul > li > a')
+        function animate(time) {
+            requestAnimationFrame(animate);
+            TWEEN.update(time);
+        }
+        requestAnimationFrame(animate);
         for(let i =0;i<aTags.length;i++){
             aTags[i].onclick = function(e){
                 e.preventDefault()
@@ -259,24 +267,25 @@
                 let element = document.querySelector(href)
               //let rect = element.getBoundingClientRect() 如果使用该API想获得下面的值，可以用rect.top+scrollY得到，scrollY===鼠标滚动的距离，rect.top===页面窗口顶端与element元素的距离。两者合为页面顶端距离当前元素的距离。
                 let top = element.offsetTop  //offsetTop元素距离页面顶端的距离
-                let n = 25
-                let duration = 500/n
                 let currentTop = window.scrollY
                 let targetTop = top - 80
-                let distance = (targetTop - currentTop)/n
-                let i = 0
-                let id =setInterval(function(){
-                    i+=1 
-                    window.scrollTo(0,currentTop+distance*i)
-                    if(i === 25){
-                        window.clearInterval(id)
-                        return
-                    }
-                },duration)
-              //  window.scrollTo(0,top-80)   第一个参数是X轴移动 第二个是Y坐标移动
+                let s = targetTop - currentTop
+                let t = Math.abs((s/100)*1000)
+                if(t > 500){
+                    t = 700
+                }
+                var coords = { y: currentTop }; 
+                var tween = new TWEEN.Tween(coords) 
+                .to({ y: targetTop }, t) 
+                .easing(TWEEN.Easing.Quadratic.InOut) 
+                .onUpdate(function() { 
+                    window.scrollTo(0,coords.y);
+                })
+                .start();
             }
         }
     </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tween.js/16.3.5/Tween.min.js"></script>
     <script src="//at.alicdn.com/t/font_458771_2apkist5etye3ik9.js"></script>
 </body>
 
