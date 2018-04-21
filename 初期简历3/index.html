@@ -255,11 +255,25 @@
             aTags[i].onclick = function(e){
                 e.preventDefault()
                 let a = e.currentTarget
-                let href = a.getAttribute('href')
+                let href = a.getAttribute('href')  // 可以获取属性值的原文，如果想获取href直接写a.href是浏览器处理过的
                 let element = document.querySelector(href)
               //let rect = element.getBoundingClientRect() 如果使用该API想获得下面的值，可以用rect.top+scrollY得到，scrollY===鼠标滚动的距离，rect.top===页面窗口顶端与element元素的距离。两者合为页面顶端距离当前元素的距离。
-                let top = element.offsetTop  //元素距离页面顶端的距离
-                window.scrollTo(0,top-80)
+                let top = element.offsetTop  //offsetTop元素距离页面顶端的距离
+                let n = 25
+                let duration = 500/n
+                let currentTop = window.scrollY
+                let targetTop = top - 80
+                let distance = (targetTop - currentTop)/n
+                let i = 0
+                let id =setInterval(function(){
+                    i+=1 
+                    window.scrollTo(0,currentTop+distance*i)
+                    if(i === 25){
+                        window.clearInterval(id)
+                        return
+                    }
+                },duration)
+              //  window.scrollTo(0,top-80)   第一个参数是X轴移动 第二个是Y坐标移动
             }
         }
     </script>

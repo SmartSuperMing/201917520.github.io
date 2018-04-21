@@ -25,7 +25,7 @@ h1,h2,h3,h4,h5,h6 { font-weight: normal;}
 .topNavBar nav>ul>li>a { color: inherit; font-size: 13px; font-weight: bold; position: relative;
    border-bottom: 3px solid transparent; border-top: 3px solid transparent; display: block;}
 .topNavBar nav>ul>li.active>a::after { content: ''; display:block; background: #E86767; width: 100%; height: 3px;
-   position: absolute; top: 100%; left: 0; animation: menuSlide .3s }
+   position: absolute; top: 100%; left: 0; animation: menuSlide .3s;}
 @keyframes menuSlide{ 0% {width: 0;} 100%{width: 100%;} }
 
 .topNavBar .submenu {
@@ -52,9 +52,6 @@ h1,h2,h3,h4,h5,h6 { font-weight: normal;}
     0%{ margin-right: 100%;}
     100%{ margin-right: 0%;}
 }
-
-
-
 
 .banner {
     height:515px;
