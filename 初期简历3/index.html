@@ -78,7 +78,7 @@
         <div class="mask"></div>
     </div>
     <main>
-        <div id="siteAbout" class="card">
+        <div data-x id="siteAbout" class="card">
             <div class="summary clearfix">
                 <div class="picter">
                     <img src="./img/avatar.jpg" alt="头像">
@@ -149,7 +149,7 @@
             刘岳， 初级前端工程师。<br> 技能：html，css，js，HTTP，Node.js
         </p>
     </main>
-    <section id="siteSkills" class="skill-List">
+    <section data-x id="siteSkills" class="skill-List">
         <h2>Professional Skills</h2>
         <ol class="clearfix">
             <li>
@@ -190,7 +190,7 @@
             </li>
         </ol>
     </section>
-    <section id="siteWorks" class="Sample">
+    <section data-x id="siteWorks" class="Sample">
         <h2>Portfolio</h2>
         <nav>
             <ol class="clearfix">
@@ -235,6 +235,27 @@
             }else{
                 topNavBar.classList.remove('stick')
             }
+
+            let specialTags = document.querySelectorAll('[data-x]')
+            let minIndex = 0
+            for(let i = 1;i<specialTags.length;i++){
+                if(Math.abs(specialTags[i].offsetTop - window.scrollY) < Math.abs(specialTags[minIndex].offsetTop - window.scrollY)){
+                    minIndex = i
+                }
+            }
+            for(let i = 0;i<specialTags.length;i++){
+                specialTags[i].classList.remove('active')
+            }
+            specialTags[minIndex].classList.add('active')
+
+            let id = specialTags[minIndex].id
+            let a = document.querySelector('a[href="#'+ id + '"]')
+            let li = a.parentNode
+            let brothersAndMe = li.parentNode.children
+            for(let i = 0;i<brothersAndMe.length;i++){
+                brothersAndMe[i].classList.remove('active')
+            }
+            li.classList.add('active')
         }
 
 
@@ -284,6 +305,8 @@
                 .start();
             }
         }
+
+
     </script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/tween.js/16.3.5/Tween.min.js"></script>
     <script src="//at.alicdn.com/t/font_458771_2apkist5etye3ik9.js"></script>

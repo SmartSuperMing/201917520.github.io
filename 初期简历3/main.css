@@ -90,6 +90,11 @@ main .card {
     
 }
 
+[data-x].active {
+    outline: 10px solid red;
+}
+
+
 .card .welcome .Triangle {
     /*三角形*/
     border: 10px solid transparent;
