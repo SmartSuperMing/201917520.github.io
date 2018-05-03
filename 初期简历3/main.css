@@ -8,7 +8,7 @@ h1,h2,h3,h4,h5,h6 { font-weight: normal;}
 
 
 [data-x].offset {
-    transform: translateY(100px);
+    transform: translateY(150px);
 }
 
 [data-x] {
@@ -246,7 +246,7 @@ p .download:hover {
 }
 
 
-.skill-List,
+.skillList,
 .Sample {
     max-width: 940px;
     margin-left: auto;
@@ -254,7 +254,7 @@ p .download:hover {
     margin-top:71px;
 }
 
-.skill-List h2,
+.skillList h2,
 .Sample h2 {
     text-align: center;
     font-family: "Open Sans";
@@ -264,14 +264,14 @@ p .download:hover {
     line-height: 1.2;
     margin-bottom:26px;
 }
-.skill-List ol {
+.skillList ol {
     box-shadow: 0px 2px 2px 2px rgba(0, 0, 0, 0.4);
     background-color:#ffffff;
     padding: 43px 21px 13px 51px;
 }
 /*不使用伪类又想左右对称可以加border后量距离减少一定ol右margin即可（原51）。另一种方法是加伪类，306条*/
 
-.skill-List ol li {
+.skillList ol li {
     float:left;
     width:50%;
     box-sizing: border-box;
@@ -287,26 +287,39 @@ p .download:hover {
     }li里要修改width，padding就不需要了。单数修改是odd。
    */
 
-    .skill-List ol li .ProgressBar {
+.skillList ol li .ProgressBar {
     background-color: #FBE0E0;
     height:5px;
     margin-bottom:37px;
     border-radius:2px;
+    overflow: hidden;
 }
 
-.skill-List ol li .ProgressBar .Progress {
+.skillList ol li .ProgressBar > .Progress {
     height:100%;
     background-color:#E86767;
-    width:70%;
     border-radius:2px;
+    transform: translateX(0%);
+    transition: all 3s;
 }
 
-.skill-List li h3 {
+.skillList.offset ol li .ProgressBar  .Progress {
+    transform: translateX(-100%);
+}
+
+
+.skillList li h3 {
     line-height: 1.1;
     padding-right:40px;
     font-size: 14px;
     margin-bottom:5px;
     color: #3F3F3F}
+
+
+
+
+
+
 
 .Sample {
     text-align: center;

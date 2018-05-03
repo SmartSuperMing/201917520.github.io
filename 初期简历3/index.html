@@ -149,43 +149,43 @@
             刘岳， 初级前端工程师。<br> 技能：html，css，js，HTTP，Node.js
         </p>
     </main>
-    <section data-x id="siteSkills" class="skill-List">
+    <section data-x id="siteSkills" class="skillList">
         <h2>Professional Skills</h2>
         <ol class="clearfix">
             <li>
                 <h3>HTML 5 &amp; CSS 3</h3>
                 <div class="ProgressBar">
-                    <div class="Progress" style="width:90%;"></div>
+                    <div class="Progress" style="width:90%"></div>
                 </div>
             </li>
             <li>
                 <h3>JavaScript</h3>
                 <div class="ProgressBar">
-                    <div class="Progress" style="width:80%;"></div>
+                    <div class="Progress" style="width:80%"></div>
                 </div>
             </li>
             <li>
                 <h3>jQuery</h3>
                 <div class="ProgressBar">
-                    <div class="Progress" style="width:70%;"></div>
+                    <div class="Progress" style="width:70%"></div>
                 </div>
             </li>
             <li>
                 <h3>Vue</h3>
                 <div class="ProgressBar">
-                    <div class="Progress" style="width:85%;"></div>
+                    <div class="Progress" style="width:85%"></div>
                 </div>
             </li>
             <li>
                 <h3>React</h3>
                 <div class="ProgressBar">
-                    <div class="Progress" style="width:80%;"></div>
+                    <div class="Progress" style="width:80%"></div>
                 </div>
             </li>
             <li>
                 <h3>HTTP</h3>
                 <div class="ProgressBar">
-                    <div class="Progress" style="width:75%;"></div>
+                    <div class="Progress" style="width:75%"></div>
                 </div>
             </li>
         </ol>
@@ -232,6 +232,8 @@
         for(let i = 0;i<specialTags.length;i++){
             specialTags[i].classList.add('offset')
         }
+        setTimeout(function(){xxx()},2500)
+
         window.onscroll = function(e){
             if(scrollY>0){
                 topNavBar.classList.add('stick')
@@ -260,7 +262,6 @@
             }
             li.classList.add('hightlight')
         }
-
 
         let liTags = document.querySelectorAll('nav.menu > ul > li')
         for(let i = 0;i<liTags.length;i++){
