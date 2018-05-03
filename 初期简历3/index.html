@@ -214,8 +214,8 @@
             }
         </script>
 
-        <div class="works"style="height: 600px;">
-            <div class="big"style="top: 0; left: 0;">
+        <div class="works" style="height: 600px;">
+            <div class="big" style="top: 0; left: 0;">
                 <img src="./img/job1.jpg" alt="作品1">
             </div>
             <div class="small1" style="top: 0px; left: 645px;">
@@ -228,14 +228,21 @@
     </section>
     <script>
         setTimeout(function(){siteWelcome.classList.remove('active')},2000)
-
+        let specialTags = document.querySelectorAll('[data-x]')
+        for(let i = 0;i<specialTags.length;i++){
+            specialTags[i].classList.add('offset')
+        }
         window.onscroll = function(e){
             if(scrollY>0){
                 topNavBar.classList.add('stick')
             }else{
                 topNavBar.classList.remove('stick')
             }
+            xxx()
+        }
 
+
+        function xxx(){
             let specialTags = document.querySelectorAll('[data-x]')
             let minIndex = 0
             for(let i = 1;i<specialTags.length;i++){
@@ -243,19 +250,15 @@
                     minIndex = i
                 }
             }
-            for(let i = 0;i<specialTags.length;i++){
-                specialTags[i].classList.remove('active')
-            }
-            specialTags[minIndex].classList.add('active')
-
+            specialTags[minIndex].classList.remove('offset')
             let id = specialTags[minIndex].id
             let a = document.querySelector('a[href="#'+ id + '"]')
             let li = a.parentNode
             let brothersAndMe = li.parentNode.children
             for(let i = 0;i<brothersAndMe.length;i++){
-                brothersAndMe[i].classList.remove('active')
+                brothersAndMe[i].classList.remove('hightlight')
             }
-            li.classList.add('active')
+            li.classList.add('hightlight')
         }
 
 

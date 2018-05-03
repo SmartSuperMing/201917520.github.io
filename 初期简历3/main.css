@@ -6,6 +6,17 @@ ul,ol,li { list-style: none;}
 h1,h2,h3,h4,h5,h6 { font-weight: normal;}
 
 
+
+[data-x].offset {
+    transform: translateY(100px);
+}
+
+[data-x] {
+    transition: all .5S;
+}
+
+
+
 .topNavBar { padding: 17px 0 17px 0; position: fixed;  top: 0;  left: 0;  width:100%; 
    color: rgba(255, 255, 255, 0.701961); transition: all 0.5s;}
 .topNavBar.stick {
@@ -26,6 +37,9 @@ h1,h2,h3,h4,h5,h6 { font-weight: normal;}
    border-bottom: 3px solid transparent; border-top: 3px solid transparent; display: block;}
 .topNavBar nav>ul>li.active>a::after { content: ''; display:block; background: #E86767; width: 100%; height: 3px;
    position: absolute; top: 100%; left: 0; animation: menuSlide .3s;}
+.topNavBar nav>ul>li.hightlight>a::after { content: ''; display:block; background: #E86767; width: 100%; height: 3px;
+   position: absolute; top: 100%; left: 0; animation: menuSlide .3s;}
+
 @keyframes menuSlide{ 0% {width: 0;} 100%{width: 100%;} }
 
 .topNavBar .submenu {
@@ -88,10 +102,6 @@ main .card {
     display:inline-block;
     position:relative;
     
-}
-
-[data-x].active {
-    outline: 10px solid red;
 }
 
 
@@ -291,7 +301,7 @@ p .download:hover {
     border-radius:2px;
 }
 
-.skill-List li H3 {
+.skill-List li h3 {
     line-height: 1.1;
     padding-right:40px;
     font-size: 14px;
